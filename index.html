@@ -1,45 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Luz</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 50px;
-      background-color: #f4f4f4;
-    }
-
-    #lamp {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: gray;
-      margin: 20px auto;
-      box-shadow: 0 0 10px #aaa;
-      transition: background-color 0.3s;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+  <title>LED Web</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="amarelo" class="led" aria-label="LED amarelo" role="img"></div>
 
-  <h1>Luz</h1>
-
-  <div id="lamp"></div>
-
-  <button id="btn-acender">Acender</button>
-  <button id="btn-apagar">Apagar</button>
-
-
-  <script src="mqttws31.js"></script>
-  <script src="script.js"></script>
+  <div class="actions">
+    <button id="btnLigar" type="button" onclick="ligarAmarelo()">Ligar</button>
+    <button id="btnDesligar" type="button" onclick="desligar()">Desligar</button>
+  </div>
+  
 </body>
+<!-- Paho MQTT (WebSockets) link da web-->
+<!-- <script src="https://unpkg.com/paho-mqtt/mqttws31.min.js"></script>-->
+  <script src="mqttws31.js"></script>  
+  <script src="script.js"></script>
 </html>

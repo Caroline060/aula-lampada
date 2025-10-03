@@ -20,7 +20,7 @@ function ligarAmarelo(){
 
     //fazendo publish no tópico, (broker)
     const msgAmar = new Paho.MQTT.Message("");
-    msgAmar.destinationName = "senai661/led/on"
+    msgAmar.destinationName = "ncg/led/on"
     clientWeb.send(msgAmar)
 }
 
@@ -28,6 +28,6 @@ function desligar(){
     document.getElementById("amarelo").classList.remove("amar");
 
     let msg = new Paho.MQTT.Message(``);
-    msg.destinationName = "senai661/led/off"
+    msg.destinationName = "ncg/led/off"
     clientWeb.send(msg);
 }
